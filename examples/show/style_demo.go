@@ -1,7 +1,7 @@
 package main
 
 import (
-"github.com/felipe-mansoldo/plyGO"
+"github.com/mansoldof/plyGO"
 )
 
 type Sample struct {

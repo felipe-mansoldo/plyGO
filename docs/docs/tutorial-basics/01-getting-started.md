@@ -7,7 +7,7 @@ sidebar_position: 1
 Install plyGO and create your first pipeline.
 
 ```bash
-go get github.com/felipe-mansoldo/plyGO
+go get github.com/mansoldof/plyGO
 ```
 
 ## Your First Program
@@ -15,7 +15,7 @@ go get github.com/felipe-mansoldo/plyGO
 ```go
 package main
 
-import "github.com/felipe-mansoldo/plyGO"
+import "github.com/mansoldof/plyGO"
 
 type Person struct {
     Name   string

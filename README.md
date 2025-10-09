@@ -15,13 +15,13 @@ A lightweight, type-safe data manipulation library for Go inspired by dplyr and 
 ## Installation
 
 ```bash
-go get github.com/felipe-mansoldo/plyGO
+go get github.com/mansoldof/plyGO
 ```
 
 ## Quick Start
 
 ```go
-import "github.com/felipe-mansoldo/plyGO"
+import "github.com/mansoldof/plyGO"
 
 type Person struct {
     Name   string

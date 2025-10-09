@@ -1,3 +1,3 @@
-module github.com/felipe-mansoldo/plyGO
+module github.com/mansoldof/plyGO
 
 go 1.21
