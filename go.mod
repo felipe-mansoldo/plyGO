@@ -1,3 +1,3 @@
-module first-program-test
+module github.com/felipe-mansoldo/plyGO
 
 go 1.21
