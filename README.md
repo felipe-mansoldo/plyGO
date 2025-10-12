@@ -21,48 +21,63 @@ go get github.com/mansoldof/plyGO
 ## Quick Start
 
 ```go
+package main
+
 import "github.com/mansoldof/plyGO"
 
 type Person struct {
-    Name   string
-    Age    int
-    City   string
-    Salary float64
+	Name   string
+	Age    int
+	City   string
+	Salary float64
 }
 
-people := []Person{
-    {"Alice", 30, "NYC", 75000},
-    {"Bob", 25, "LA", 60000},
-    {"Charlie", 35, "NYC", 90000},
+func main() {
+
+	people := []Person{
+		{"Frank", 43, "FL", 88000},
+		{"Alice", 30, "NYC", 75000},
+		{"Bob", 25, "LA", 60000},
+		{"Charlie", 35, "NYC", 90000},
+	}
+
+	// Display with elegant formatting
+	plygo.From(people).Show()
+
+	// Filter and show
+	plygo.From(people).
+		Where("Age").GreaterThan(30).
+		Show(plygo.WithTitle("Age > 30"))
+
 }
-
-// Display with elegant formatting
-plygo.From(people).Show()
-
-// Filter and show
-plygo.From(people).
-    Where("Age").GreaterThan(30).
-    Show(plygo.WithTitle("Age > 30"))
 ```
 
-## Table Visualization (NEW!)
+<div align="center"> <img src="https://github.com/user-attachments/assets/294a8e81-b999-4101-bf7f-efd9da26c54e" alt="plyGO example" width="293" 
+                         style="border-radius:12px; box-shadow:0 4px 18px rgba(0,0,0,0.2); margin-top:1rem;">
+<p><em>Console output</em></p> 
+</div>
+
+## Table Visualization
 
 ### Basic Usage
 
 ```go
-// Simple display with default formatting
-plygo.From(people).Show()
-// ┌──────────┬─────┬──────┬─────────┐
-// │ Name     │ Age │ City │ Salary  │
-// ├──────────┼─────┼──────┼─────────┤
-// │ Alice    │  30 │ NYC  │ 75000.0 │
-// │ Bob      │  25 │ LA   │ 60000.0 │
-// │ Charlie  │  35 │ NYC  │ 90000.0 │
-// └──────────┴─────┴──────┴─────────┘
-// [3 rows × 4 columns]
+	// Display with elegant formatting
+	plygo.From(people).Show(plygo.WithStyle("rounded"))
+
+	// Filter and show
+	plygo.From(people).
+		Where("Salary").LessThan(80000).
+		Show(plygo.WithTitle("Salary < $80,000"),
+			plygo.WithStyle("rounded"))
 ```
 
-### Table Styles
+<div align="center"> <img src="https://github.com/user-attachments/assets/baf3e38e-f5bb-417c-b20f-4a354b584b0e" alt="plyGO example" width="284" 
+                         style="border-radius:12px; box-shadow:0 4px 18px rgba(0,0,0,0.2); margin-top:1rem;">
+<p><em>Console output</em></p> 
+</div>
+
+## Table Styles
 
 ```go
 // Rounded borders
@@ -78,7 +93,7 @@ plygo.From(people).Show(plygo.WithStyle("minimal"))
 plygo.From(people).Show(plygo.WithStyle("markdown"))
 ```
 
-### Customization Options
+## Customization Options
 
 ```go
 // With title
