@@ -60,7 +60,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/felipe-mansoldo/plyGO' }
+      { icon: 'github', link: 'https://github.com/mansoldof/plyGO' }
     ],
 
     search: {
@@ -68,7 +68,7 @@ export default defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/felipe-mansoldo/plyGO/edit/main/docs/:path',
+      pattern: 'https://github.com/mansoldof/plyGO/edit/main/docs/:path',
       text: 'Edit this page on GitHub'
     },
 
